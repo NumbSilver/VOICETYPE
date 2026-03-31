@@ -34,15 +34,10 @@ No third press within 4s → quiet reset
 ## Install
 
 ```bash
-git clone https://github.com/NumbSilver/VOICETYPE.git VoiceType
-cd VoiceType
-npm install
-node cli/index.mjs install
+npx github:NumbSilver/VOICETYPE install
 ```
 
-When prompted, indicate you **do not** use a DJI Mic Mini receiver, or pass `--trigger-mode keyboard`.
-
-Optional: `npm link` then `dji-mic-dictation install`.
+When prompted, choose **Mac or headset mic only**, or pass `--trigger-mode keyboard` to skip the question.
 
 ## Quick start
 

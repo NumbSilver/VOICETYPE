@@ -52,7 +52,13 @@ Default to the CLI instead of manually editing files.
 
 ### Install
 
-From the repository root after `npm install` (or use `npm link` and the `dji-mic-dictation` command):
+One-line install (fetches repo, installs deps, runs CLI):
+
+```bash
+npx github:NumbSilver/VOICETYPE install
+```
+
+Or from the repository root after `npm install`:
 
 ```bash
 node cli/index.mjs install

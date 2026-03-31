@@ -34,13 +34,10 @@ Fn 第 3 下 → 对前台 App 发送 Enter
 ## 安装
 
 ```bash
-git clone https://github.com/NumbSilver/VOICETYPE.git VoiceType
-cd VoiceType
-npm install
-node cli/index.mjs install
+npx github:NumbSilver/VOICETYPE install
 ```
 
-可选：`npm link` 后使用 `dji-mic-dictation install`。
+提示时选择 **Mac / 耳机麦克风**，或直接传 `--trigger-mode keyboard` 跳过提问。
 
 ## 三步上手
 

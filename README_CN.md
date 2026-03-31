@@ -15,7 +15,16 @@
 
 非交互安装（`--yes`、`--json` 等）不会提问；请自行传 `--trigger-mode keyboard`（仅键盘与 Mac 听写）或 `--trigger-mode keyboard+dji`（含接收器按键映射）。
 
-## 最短安装命令
+## 一句话安装
+
+```bash
+npx github:NumbSilver/VOICETYPE install
+```
+
+`npx` 会自动拉取仓库、安装依赖、运行交互安装器。
+
+<details>
+<summary>备选：先克隆再安装</summary>
 
 ```bash
 git clone https://github.com/NumbSilver/VOICETYPE.git VoiceType
@@ -24,7 +33,7 @@ npm install
 node cli/index.mjs install
 ```
 
-可选：在本目录 `npm link` 后使用全局命令 `dji-mic-dictation install`。
+</details>
 
 ## 两条路径的共同前置
 

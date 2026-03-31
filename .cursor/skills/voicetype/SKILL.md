@@ -43,14 +43,14 @@ Before installing, verify (or guide the user to install):
 ## Step 3: Run the installer
 
 ```bash
-cd <voicetype-repo-root>
-npm install
-node cli/index.mjs install --trigger-mode <keyboard|keyboard+dji>
+npx github:NumbSilver/VOICETYPE install --trigger-mode <keyboard|keyboard+dji>
 ```
 
 Add `--yes` to skip interactive confirmations. Add `--json` for machine-readable output.
 
 The installer handles: Karabiner rule merge, script copy, config file creation, permission reminders.
+
+If the user already cloned the repo, use `node cli/index.mjs install` from the repo root instead.
 
 ## Lifecycle commands
 

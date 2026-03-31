@@ -33,15 +33,10 @@ During `node cli/index.mjs install`, choose **DJI Mic Mini** when asked. If the 
 ## Install
 
 ```bash
-git clone https://github.com/NumbSilver/VOICETYPE.git VoiceType
-cd VoiceType
-npm install
-node cli/index.mjs install
+npx github:NumbSilver/VOICETYPE install
 ```
 
-Use the **DJI** path at the first prompt, or `--trigger-mode keyboard+dji`.
-
-Optional: `npm link` then `dji-mic-dictation install`.
+Choose the **DJI Mic Mini** path at the first prompt, or pass `--trigger-mode keyboard+dji`.
 
 ## Quick start
 

@@ -15,7 +15,16 @@ Works in any app that accepts text: Claude Code, WeChat, Feishu/Lark, Telegram, 
 
 Non-interactive installs (`--yes`, `--json`, or CI) skip that question; pass `--trigger-mode keyboard` for Mac-mic-only, or `--trigger-mode keyboard+dji` when you want receiver mappings.
 
-## Minimal install command
+## One-line install
+
+```bash
+npx github:NumbSilver/VOICETYPE install
+```
+
+That's it. `npx` fetches the repo, installs dependencies, and runs the interactive installer.
+
+<details>
+<summary>Alternative: clone first, then install</summary>
 
 ```bash
 git clone https://github.com/NumbSilver/VOICETYPE.git VoiceType
@@ -24,11 +33,7 @@ npm install
 node cli/index.mjs install
 ```
 
-Optional global CLI after `npm link`:
-
-```bash
-dji-mic-dictation install
-```
+</details>
 
 ## Shared prerequisites (both paths)
 

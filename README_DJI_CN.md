@@ -33,13 +33,10 @@ Fn 第 3 下 → 发送 Enter（须在短时间内完成）
 ## 安装
 
 ```bash
-git clone https://github.com/NumbSilver/VOICETYPE.git VoiceType
-cd VoiceType
-npm install
-node cli/index.mjs install
+npx github:NumbSilver/VOICETYPE install
 ```
 
-首步选 DJI 路径，或直接使用 `--trigger-mode keyboard+dji`。
+首步选 **DJI Mic Mini** 路径，或直接使用 `--trigger-mode keyboard+dji`。
 
 ## 快速上手
 
