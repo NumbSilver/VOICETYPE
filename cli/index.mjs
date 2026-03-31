@@ -739,6 +739,50 @@ async function ensureKarabinerConfigReady(runtime, interactive) {
 	}
 }
 
+const TYPELESS_DOWNLOAD_URL = 'https://www.typeless.com/referral?tl_src=macos';
+const TYPELESS_RECHECK_TIMEOUT_MS = 2000;
+
+async function ensureTypelessInstalled(runtime, interactive) {
+	if (await pathExists(runtime.typelessDbPath)) {
+		return;
+	}
+
+	if (!interactive) {
+		return;
+	}
+
+	note(
+		[
+			'Typeless is required for text detection in the current version.',
+			'',
+			`Download: ${TYPELESS_DOWNLOAD_URL}`,
+			'After installing, open Typeless once so it creates its database.',
+		].join('\n'),
+		'Missing dependency',
+	);
+
+	await execFile('open', [TYPELESS_DOWNLOAD_URL]).catch(() => {});
+
+	while (true) {
+		const shouldRetry = await askBooleanPrompt(
+			'Install and open Typeless, then check again?',
+			true,
+		);
+		if (!shouldRetry) {
+			cancel('Install paused until Typeless is installed and opened once.');
+			process.exit(1);
+		}
+		if (await waitForPath(runtime.typelessDbPath, TYPELESS_RECHECK_TIMEOUT_MS)) {
+			log.success('Typeless DB found');
+			return;
+		}
+		note(
+			'Typeless DB still not found. Make sure you have opened Typeless at least once after installing.',
+			'Not ready',
+		);
+	}
+}
+
 async function ensureKarabinerInstalled(runtime, flags, interactive) {
 	const karabinerCliExists = await pathExists(runtime.karabinerCliPath);
 	if (!karabinerCliExists) {
@@ -807,6 +851,7 @@ async function retryableInstall(runtime, flags, interactive) {
 	const explicitProfileOverrides = buildProfileOverrides(flags);
 	const explicitTriggerMode = flags.triggerMode;
 
+	await ensureTypelessInstalled(runtime, interactive);
 	await ensureKarabinerInstalled(runtime, flags, interactive);
 
 	while (true) {
