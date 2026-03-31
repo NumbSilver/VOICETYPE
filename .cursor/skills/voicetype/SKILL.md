@@ -35,11 +35,10 @@ This determines:
 
 Before installing, verify (or guide the user to install):
 
-1. **Xcode CLI Tools** — `xcode-select --install`; if license not accepted: `sudo xcodebuild -license accept` (requires user's sudo password in their own terminal — agent cannot do this)
-2. **Node.js ≥ 20** — `node --version`; install via `brew install node` or https://nodejs.org/
-3. **Karabiner-Elements** — `brew install --cask karabiner-elements` (the CLI installer can also do this)
-4. **macOS Dictation** — System Settings → Keyboard → Dictation → On
-5. **Typeless** — download from https://www.typeless.com/referral?tl_src=macos and open once
+1. **Node.js ≥ 20** — `node --version`; download from https://nodejs.org/
+2. **Karabiner-Elements** — download from https://karabiner-elements.pqrs.org/ (the CLI installer can also brew-install it, but that path may require Xcode CLI tools — prefer the direct download)
+3. **macOS Dictation** — System Settings → Keyboard → Dictation → On
+4. **Typeless** — download from https://www.typeless.com/referral?tl_src=macos and open once
 
 ## Step 3: Run the installer
 

@@ -40,9 +40,8 @@ node cli/index.mjs install
 | Requirement | Notes |
 |-------------|-------|
 | macOS | Tested on macOS Sequoia |
-| Xcode CLI Tools | `xcode-select --install` — if prompted for license: `sudo xcodebuild -license accept` |
-| [Node.js](https://nodejs.org/) ≥ 20 | `brew install node` or [download](https://nodejs.org/) |
-| [Karabiner-Elements](https://karabiner-elements.pqrs.org/) | The installer can `brew install` it for you |
+| [Node.js](https://nodejs.org/) ≥ 20 | [Download](https://nodejs.org/) |
+| [Karabiner-Elements](https://karabiner-elements.pqrs.org/) | [Download](https://karabiner-elements.pqrs.org/) or `brew install --cask karabiner-elements` |
 | macOS Dictation | System Settings → Keyboard → Dictation → On |
 | [Typeless](https://www.typeless.com/referral?tl_src=macos) | Required today (text detection uses its database) |
 
