@@ -40,7 +40,9 @@ node cli/index.mjs install
 | 需求 | 说明 |
 |------|------|
 | macOS | 已在 Sequoia 上验证 |
-| [Karabiner-Elements](https://karabiner-elements.pqrs.org/) | `Fn` 工作流依赖 |
+| Xcode 命令行工具 | `xcode-select --install`；若提示许可协议：`sudo xcodebuild -license accept` |
+| [Node.js](https://nodejs.org/) ≥ 20 | `brew install node` 或[官网下载](https://nodejs.org/) |
+| [Karabiner-Elements](https://karabiner-elements.pqrs.org/) | 安装器可自动 `brew install` |
 | macOS 听写 | 系统设置 → 键盘 → 听写 → 开启 |
 | [Typeless](https://www.typeless.com/referral?tl_src=macos) | 当前版本依赖其数据库做文本检测 |
 

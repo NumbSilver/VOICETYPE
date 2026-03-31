@@ -16,6 +16,14 @@ Reports: Typeless DB, Karabiner config, installed script/config, device status, 
 
 ## Common issues
 
+### Install-time
+
+| Symptom | Cause | Fix |
+|---------|-------|-----|
+| `xcodebuild` license error | Xcode CLI license not accepted | User runs `sudo xcodebuild -license accept` in their own terminal (needs password) |
+| `brew` not found | Homebrew not installed | `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` |
+| `node` not found / version too old | Node.js < 20 or missing | `brew install node` or download from https://nodejs.org/ |
+
 ### Keyboard workflow (both paths)
 
 | Symptom | Cause | Fix |
